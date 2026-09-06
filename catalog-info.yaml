@@ -1,0 +1,25 @@
+# Gerado por fernando-moretes/platform. Não edite aqui: mude no orquestrador e
+# rode `make rollout`. É o que o Backstage (backstage.home.lab) lê deste repo.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ref-rs-visao-real
+  description: Public Fernando Moretes repository connected to the broader architecture and engineering portfolio.
+  annotations:
+    github.com/project-slug: fernandofatech/ref-rs-visao-real
+    backstage.io/source-location: url:https://github.com/fernandofatech/ref-rs-visao-real
+    sonarqube.org/project-key: ref-rs-visao-real
+  links:
+    - url: https://github.com/fernandofatech/ref-rs-visao-real/actions
+      title: Actions
+      icon: github
+    - url: https://sonarqube.home.lab/dashboard?id=ref-rs-visao-real
+      title: SonarQube
+    - url: https://defectdojo.home.lab/product?name=ref-rs-visao-real
+      title: DefectDojo
+  tags: [documentation, ci-python.yml]
+spec:
+  type: documentation
+  lifecycle: experimental
+  owner: group:plataforma
+  system: homelab
