@@ -4,7 +4,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ref-rs-visao-real
-  description: Public Fernando Moretes repository connected to the broader architecture and engineering portfolio.
+  description: "Public Fernando Moretes repository connected to the broader architecture and engineering portfolio."
   annotations:
     github.com/project-slug: fernandofatech/ref-rs-visao-real
     backstage.io/source-location: url:https://github.com/fernandofatech/ref-rs-visao-real
@@ -17,7 +17,9 @@ metadata:
       title: SonarQube
     - url: https://defectdojo.home.lab/product?name=ref-rs-visao-real
       title: DefectDojo
-  tags: [documentation, ci-python.yml]
+  # tags so aceitam [a-z0-9-]: ci-python.yml (ci-node.yml) tem ponto e reprovava
+  # todo componente na policy check do Backstage.
+  tags: [documentation, python]
 spec:
   type: documentation
   lifecycle: experimental
