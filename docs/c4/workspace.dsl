@@ -7,12 +7,16 @@
  */
 workspace "ref-rs-visao-real" "Public Fernando Moretes repository connected to the broader architecture and engineering portfolio." {
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         usuario = person "Usuário"
         sistema = softwareSystem "ref-rs-visao-real" "Public Fernando Moretes repository connected to the broader architecture and engineering portfolio." {
             app = container "Aplicação" "Descreva o que roda aqui" "ci-python.yml"
         }
-        usuario -> sistema.app "Usa"
+        usuario -> sistema.app "Usa" "HTTPS"
     }
 
     views {
@@ -25,9 +29,19 @@ workspace "ref-rs-visao-real" "Public Fernando Moretes repository connected to t
             autoLayout lr
         }
         styles {
-            element "Person" { shape person; background #08427b; color #ffffff }
-            element "Software System" { background #1168bd; color #ffffff }
-            element "Container" { background #438dd5; color #ffffff }
+            element "Person" {
+                shape person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 }
