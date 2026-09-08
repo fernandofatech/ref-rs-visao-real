@@ -7,8 +7,12 @@ metadata:
   description: "Public Fernando Moretes repository connected to the broader architecture and engineering portfolio."
   annotations:
     github.com/project-slug: fernandofatech/ref-rs-visao-real
-    backstage.io/source-location: url:https://github.com/fernandofatech/ref-rs-visao-real
+    # URL da arvore com barra final: e dela que o TechDocs resolve `dir:.`;
+    # sem a barra ele sobe um nivel e pede api.github.com/repos/<dono> (404).
+    backstage.io/source-location: url:https://github.com/fernandofatech/ref-rs-visao-real/tree/main/
     sonarqube.org/project-key: ref-rs-visao-real
+    # TechDocs: mkdocs.yml + docs/ do proprio repositorio (rolados pelo platform)
+    backstage.io/techdocs-ref: dir:.
   links:
     - url: https://github.com/fernandofatech/ref-rs-visao-real/actions
       title: Actions
